@@ -1,0 +1,127 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Homework | AIMS Portal</title>
+
+    <link rel="stylesheet" href="teacher-homework.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+<div class="dashboard">
+
+    <aside class="sidebar">
+        <h2>AIMS Teacher</h2>
+
+        <nav>
+            <a href="teacher-dashboard.html">Dashboard</a>
+            <a href="teacher-profile.html">My Profile</a>
+            <a href="teacher-classes.html">My Classes</a>
+            <a href="teacher-timetable.html">My Timetable</a>
+            <a href="teacher-student-attendance.html">Student Attendance</a>
+            <a href="teacher-homework.html" class="active">Homework</a>
+            <a href="teacher-homework-submissions.html"> Homework Submissions</a>
+            <a href="teacher-results.html">Student Results</a>
+        </nav>
+
+        <button id="logoutBtn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <h2>Homework Management</h2>
+            <span id="teacherName">Teacher</span>
+        </header>
+
+        <section class="welcome">
+            <h1>Manage Homework</h1>
+            <p>Create homework for your assigned classes.</p>
+        </section>
+
+        <section class="homework-form-card">
+            <h2>Create New Homework</h2>
+
+            <form id="homeworkForm">
+
+                <label for="classFilter">Select Class</label>
+                <select id="classFilter" required>
+                    <option value="">Select Class</option>
+                </select>
+
+                <label for="sectionFilter">Select Section</label>
+                <select id="sectionFilter" required>
+                    <option value="">Select Section</option>
+                </select>
+
+                <label for="subjectFilter">Select Subject</label>
+                <select id="subjectFilter" required>
+                    <option value="">Select Subject</option>
+                </select>
+
+                <label for="homeworkTitle">Homework Title</label>
+                <input type="text" id="homeworkTitle"
+                    placeholder="Enter homework title" required>
+
+                <label for="homeworkDescription">Description</label>
+                <textarea id="homeworkDescription"
+                    placeholder="Enter homework instructions"
+                    rows="5" required></textarea>
+
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" required>
+
+                <!-- PDF Upload -->
+                <label for="homeworkPdf">Attach Homework PDF (Optional)</label>
+                <input
+                    type="file"
+                    id="homeworkPdf"
+                    accept=".pdf,application/pdf"
+                >
+
+                <small>PDF only. Maximum file size: 5 MB.</small>
+
+                <p id="pdfFileName"></p>
+
+                <button type="submit">Create Homework</button>
+
+            </form>
+        </section>
+
+        <p id="statusMessage"></p>
+
+        <section class="homework-list-card">
+            <h2>My Homework</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Due Date</th>
+                            <th>PDF</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="homeworkTableBody">
+                        <tr>
+                            <td colspan="5">Loading homework...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+</div>
+
+<script src="teacher-homework.js"></script>
+
+</body>
+</html>

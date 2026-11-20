@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login | AIMS</title>
+
+    <link rel="stylesheet" href="teacher-login.css">
+</head>
+<body>
+
+    <div class="login-container">
+
+        <div class="school-brand">
+          <img src="images/aimslogo.jpg" alt="AIMS School Logo">
+
+           <h2>Alpha International Mission School</h2>
+           <p>Excellence in Education</p>
+   </div>
+
+        <div class="login-header">
+            <h2>Teacher Portal</h2>
+            <p>Welcome back! Please login to continue.</p>
+        </div>
+
+        <form id="teacherLoginForm">
+
+            <div class="form-group">
+                <label for="teacherId">Teacher ID</label>
+                <input
+                    type="text"
+                    id="teacherId"
+                    placeholder="Enter your Teacher ID"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                    required
+                >
+            </div>
+
+            <button type="submit" id="loginBtn">Login to Teacher Portal</button>
+
+            <p id="statusMessage"></p>
+
+        </form>
+
+        <div class="login-footer">
+            <a href="index.html">Back to Home</a>
+            <p>© 2026 Alpha International Mission School</p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teacher-login.js"></script>
+
+</body>
+</html>

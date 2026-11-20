@@ -1,0 +1,534 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #263238;
+    overflow-x: hidden;
+}
+
+/* =================================
+   DESKTOP SIDEBAR
+================================= */
+
+.menu-toggle,
+.close-menu,
+.sidebar-overlay {
+    display: none;
+}
+
+.sidebar {
+    width: 320px;
+    max-width: 85vw;
+    height: 100vh;
+    background: #142b4a;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 25px 18px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1100;
+    overflow-y: auto;
+    transform: translateX(0);
+}
+
+/* Sidebar Logo */
+
+.logo {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.logo img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    background: transparent;
+    border-radius: 12px;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 12px;
+}
+
+.logo h2 {
+    font-size: 19px;
+    line-height: 1.4;
+    color: white;
+}
+
+.logo p {
+    font-size: 14px;
+    color: #b9c9dc;
+    margin-top: 5px;
+}
+
+/* AIMS Sidebar Background */
+
+.sidebar .logo {
+    background:
+        linear-gradient(
+            rgba(20, 43, 74, 0.65),
+            rgba(20, 43, 74, 0.65)
+        ),
+        url("back1.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 22px 10px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+/* Navigation */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.sidebar nav a {
+    color: #dce7f5;
+    text-decoration: none;
+    padding: 13px 14px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: #2463a6;
+    color: white;
+}
+
+/* Logout */
+
+.logout-btn {
+    margin-top: auto;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #dc3545;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.logout-btn:hover {
+    background: #bd2130;
+}
+
+/* =================================
+   MAIN CONTENT
+================================= */
+
+.main-content {
+    margin-left: 320px;
+    width: calc(100% - 320px);
+    padding: 30px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.topbar h1 {
+    color: #142b4a;
+    margin-bottom: 7px;
+}
+
+.topbar p {
+    color: #718096;
+}
+
+.teacher-info {
+    background: white;
+    padding: 12px 18px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px #0000000d;
+}
+
+/* Welcome Section */
+
+.welcome-section {
+    background: linear-gradient(120deg, #174a7e, #287ac0);
+    color: white;
+    padding: 28px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+}
+
+.welcome-section h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+/* =================================
+   STATISTICS
+================================= */
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000d;
+    border-left: 4px solid #287ac0;
+}
+
+.stat-card h3 {
+    color: #718096;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.stat-card p {
+    font-size: 30px;
+    font-weight: bold;
+    color: #142b4a;
+}
+
+/* =================================
+   QUICK ACCESS
+================================= */
+
+.dashboard-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px #0000000d;
+}
+
+.dashboard-section h2 {
+    margin-bottom: 20px;
+    color: #142b4a;
+}
+
+.quick-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.quick-grid a {
+    display: block;
+    text-align: center;
+    padding: 22px 12px;
+    background: #edf5fd;
+    color: #174a7e;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.quick-grid a:hover {
+    background: #d6eaff;
+    transform: translateY(-3px);
+}
+
+#statusMessage {
+    margin-top: 20px;
+    color: #c0392b;
+}
+
+/* =================================
+   TEACHER PROFILE CARD
+================================= */
+
+.teacher-profile-card {
+    background: #ffffff;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.teacher-profile-photo {
+    width: 145px;
+    height: 160px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #edf2f7;
+    border: 2px solid #dce4ed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#teacherPhoto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#noTeacherPhoto {
+    color: #64748b;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+}
+
+.teacher-profile-details {
+    flex: 1;
+    min-width: 220px;
+}
+
+.teacher-profile-details h2 {
+    color: #17365d;
+    margin-bottom: 15px;
+}
+
+.teacher-profile-details p {
+    margin: 11px 0;
+    color: #475569;
+}
+
+.teacher-profile-details strong {
+    color: #1e293b;
+}
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 1000px) and (min-width: 651px) {
+
+    .sidebar {
+        width: 260px;
+    }
+
+    .main-content {
+        margin-left: 260px;
+        width: calc(100% - 260px);
+        padding: 22px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quick-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* =================================
+   MOBILE ONLY MENU
+================================= */
+
+@media (max-width: 650px) {
+
+    /* Hamburger Button */
+
+    .menu-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        width: 45px;
+        height: 45px;
+        background: #142b4a;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 25px;
+        cursor: pointer;
+        z-index: 1200;
+        box-shadow: 0 3px 10px #00000025;
+    }
+
+    .menu-toggle:hover {
+        background: #2463a6;
+    }
+
+    /* Mobile Sidebar */
+
+    .sidebar {
+        display: flex;
+        width: 320px;
+        max-width: 85vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 25px 18px;
+        flex-direction: column;
+        background: #142b4a;
+        z-index: 1100;
+        overflow-y: auto;
+
+        transform: translateX(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    /* Close Button */
+
+    .close-menu {
+        display: block;
+        align-self: flex-end;
+        background: transparent;
+        color: white;
+        border: none;
+        font-size: 32px;
+        cursor: pointer;
+        line-height: 1;
+        margin-bottom: 10px;
+    }
+
+    /* Mobile Overlay */
+
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .sidebar-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Main Content */
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 18px;
+        padding-top: 85px;
+    }
+
+    .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .stats-grid,
+    .quick-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section {
+        padding: 22px;
+    }
+
+    /* Profile Card */
+
+    .teacher-profile-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .teacher-profile-photo {
+        width: 125px;
+        height: 140px;
+    }
+}
+
+
+/* Mobile AIMS ERP Header - Hidden on Laptop */
+.mobile-brand {
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #ffffff;
+        padding: 12px 15px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px #0000000d;
+    }
+
+    .mobile-brand img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .mobile-brand h2 {
+        color: #142b4a;
+        font-size: 23px;
+        font-weight: bold;
+    }
+}
+
+
+
+
+
+
+/* AIMS ERP Mobile Header */
+.mobile-brand {
+    display: none;
+}
+
+@media (max-width: 650px) {
+
+    .mobile-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        background: #ffffff;
+        padding: 12px 15px;
+        margin-bottom: 22px;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px #0000000d;
+    }
+
+    .mobile-brand img {
+        width: 48px;
+        height: 48px;
+        object-fit: contain;
+    }
+
+    .mobile-brand h2 {
+        color: #142b4a;
+        font-size: 23px;
+        font-weight: bold;
+        margin: 0;
+    }
+}

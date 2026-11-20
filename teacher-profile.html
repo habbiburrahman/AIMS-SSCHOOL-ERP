@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | AIMS Teacher Portal</title>
+
+    <link rel="stylesheet" href="teacher-profile.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="brand">
+            <img src="logo.jpg" alt="AIMS School Logo">
+
+            <div class="brand-text">
+                <h2>AIMS School ERP</h2>
+                <p>Alpha International Mission School</p>
+                <span>Teacher Portal</span>
+            </div>
+        </div>
+
+        <a href="teacher-dashboard.html" class="back-btn">
+            ← Back to Dashboard
+        </a>
+
+    </header>
+
+    <main class="container">
+
+        <section class="profile-heading">
+            <h1>My Profile</h1>
+            <p>View your personal and professional information.</p>
+        </section>
+
+        <section class="profile-card">
+
+            <div class="profile-top">
+
+                <div class="avatar-container">
+
+                    <img
+                        id="teacherPhoto"
+                        src=""
+                        alt="Teacher Profile Photo"
+                        style="display:none;"
+                    >
+
+                    <div class="avatar" id="teacherAvatar">T</div>
+
+                </div>
+
+                <div>
+                    <h2 id="teacherName">Loading...</h2>
+                    <p>Teacher</p>
+                </div>
+
+            </div>
+
+            <div class="profile-details">
+
+                <div class="detail">
+                    <label>Employee ID</label>
+                    <p id="employeeId">Loading...</p>
+                </div>
+
+                <div class="detail">
+                    <label>Subject</label>
+                    <p id="subject">Loading...</p>
+                </div>
+
+                <div class="detail">
+                    <label>Phone Number</label>
+                    <p id="phone">Loading...</p>
+                </div>
+
+                <div class="detail">
+                    <label>Email Address</label>
+                    <p id="email">Loading...</p>
+                </div>
+
+                <div class="detail">
+                    <label>Qualification</label>
+                    <p id="qualification">Loading...</p>
+                </div>
+
+                <div class="detail">
+                    <label>Joining Date</label>
+                    <p id="joiningDate">Loading...</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <p id="statusMessage"></p>
+
+    </main>
+
+    <script src="teacher-profile.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Timetable | AIMS</title>
+
+    <link rel="stylesheet" href="teacher-timetable.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>AIMS</h2>
+            <p>Teacher Portal</p>
+        </div>
+
+        <nav>
+            <a href="teacher-dashboard.html">Dashboard</a>
+            <a href="teacher-profile.html">My Profile</a>
+            <a href="teacher-classes.html">My Classes</a>
+            <a href="teacher-timetable.html" class="active">My Timetable</a>
+            <a href="teacher-attendance.html">Student Attendance</a>
+            <a href="teacher-homework.html">Homework</a>
+            <a href="teacher-results.html">Student Results</a>
+        </nav>
+
+        <button id="logoutBtn" class="logout-btn">Logout</button>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>My Timetable</h1>
+                <p>View your weekly teaching schedule</p>
+            </div>
+
+            <div class="teacher-info">
+                <span id="teacherName">Loading...</span>
+            </div>
+        </header>
+
+        <section class="welcome-section">
+            <h2>Weekly Timetable</h2>
+            <p>Your assigned periods, classes and subjects.</p>
+        </section>
+
+        <section class="filter-section">
+            <label for="dayFilter">Filter by Day:</label>
+            <select id="dayFilter">
+                <option value="All">All Days</option>
+                <option value="Monday">Monday</option>
+                <option value="Tuesday">Tuesday</option>
+                <option value="Wednesday">Wednesday</option>
+                <option value="Thursday">Thursday</option>
+                <option value="Friday">Friday</option>
+                <option value="Saturday">Saturday</option>
+            </select>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Schedule Details</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>Period</th>
+                            <th>Time</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Subject</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="timetableBody">
+                        <tr>
+                            <td colspan="6">Loading timetable...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <p id="statusMessage"></p>
+
+    </main>
+
+    <script src="teacher-timetable.js"></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 15px;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(rgba(10, 25, 48, 0.78), rgba(10, 25, 48, 0.78)),
+        url("images/school-background.jpg") center/cover no-repeat fixed;
+
+    background-color: #10233f;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 440px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+}
+
+.school-brand {
+    text-align: center;
+    padding: 20px 12px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+
+    background:
+        linear-gradient(rgba(15, 39, 71, 0.65), rgba(15, 39, 71, 0.65)),
+        url("images/school-background.jpg") center/cover no-repeat;
+
+    color: #ffffff;
+}
+
+.school-brand img {
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.school-brand h1 {
+    font-size: 19px;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.school-brand p {
+    margin-top: 7px;
+    font-size: 12px;
+    color: #f2d58a;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login-header h2 {
+    color: #102b50;
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.login-header p {
+    color: #777777;
+    font-size: 14px;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #24364b;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d4dce7;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    background: #f9fbfd;
+}
+
+.form-group input:focus {
+    border-color: #c49a35;
+    box-shadow: 0 0 0 3px rgba(196, 154, 53, 0.15);
+    background: #ffffff;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: #102b50;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #c49a35;
+    color: #10233f;
+}
+
+button[type="submit"]:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+#statusMessage {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 23px;
+}
+
+.login-footer a {
+    color: #173b68;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.login-footer a:hover {
+    color: #c49a35;
+}
+
+.login-footer p {
+    margin-top: 18px;
+    color: #888888;
+    font-size: 11px;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 15px;
+        background-attachment: scroll;
+    }
+
+    .login-container {
+        padding: 22px 18px;
+    }
+
+    .school-brand h1 {
+        font-size: 17px;
+    }
+
+    .login-header h2 {
+        font-size: 23px;
+    }
+}
+
+.school-brand {
+    background:
+        linear-gradient(rgba(15, 39, 71, 0.45), rgba(15, 39, 71, 0.45)),
+        url("back.jpg") center/cover no-repeat;
+    padding: 25px 15px;
+    border-radius: 14px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.school-brand img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 12px;
+}
+
+.school-brand h2 {
+    color: white;
+    margin: 10px 0;
+}
+
+.school-brand p {
+    color: #ffd36a;
+    margin: 8px 0 0;
+}
+
+@media (max-width: 600px) {
+    .school-brand {
+        padding: 20px 10px;
+    }
+
+    .school-brand h2 {
+        font-size: 20px;
+    }
+}

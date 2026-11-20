@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Teacher Management</title>
+    <link rel="stylesheet" href="teachers.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand-section">
+            <img
+                src="logo.jpg"
+                alt="AIMS School Logo"
+                class="school-logo"
+            >
+
+            <div class="brand-text">
+                <h1>AIMS School ERP</h1>
+                <p>Teacher Management</p>
+            </div>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Teacher Management</h2>
+            <p>Add and manage school teachers.</p>
+        </section>
+
+        <section class="form-card">
+            <h2>Add New Teacher</h2>
+
+            <form id="teacherForm">
+
+                <div class="form-grid">
+
+                    <div>
+                        <label for="teacherName">Teacher Name</label>
+                        <input type="text" id="teacherName" required>
+                    </div>
+
+                    <div>
+                        <label for="employeeId">Employee ID</label>
+                        <input type="text" id="employeeId" required>
+                    </div>
+
+                    <div>
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div>
+                        <label for="qualification">Qualification</label>
+                        <input type="text" id="qualification"
+                               placeholder="e.g. B.Ed, M.Sc, M.A">
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone">
+                    </div>
+
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email">
+                    </div>
+
+                    <div>
+                        <label for="joiningDate">Joining Date</label>
+                        <input type="date" id="joiningDate">
+                    </div>
+
+                    <div>
+                        <label for="teacherPhoto">Teacher Photo</label>
+                        <input
+                            type="file"
+                            id="teacherPhoto"
+                            accept="image/jpeg,image/png,image/webp"
+                            required
+                        >
+
+                        <div id="teacherPhotoPreviewContainer" style="display:none;">
+                            <img
+                                id="teacherPhotoPreview"
+                                src=""
+                                alt="Teacher Photo Preview"
+                            >
+                        </div>
+                    </div>
+
+                </div>
+
+                <button type="submit" id="saveTeacherBtn">
+                    Save Teacher
+                </button>
+
+                <p id="formMessage"></p>
+
+            </form>
+        </section>
+
+        <section class="table-card">
+
+            <h2>Teacher Records</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Photo</th>
+                            <th>ID</th>
+                            <th>Teacher Name</th>
+                            <th>Employee ID</th>
+                            <th>Subject</th>
+                            <th>Qualification</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Joining Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="teacherTableBody">
+                        <tr>
+                            <td colspan="10">Loading teachers...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teachers.js"></script>
+
+</body>
+</html>

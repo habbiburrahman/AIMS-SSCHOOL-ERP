@@ -1,0 +1,396 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+.container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
+}
+
+h2 {
+    color: #1e3a8a;
+    margin: 15px 0 20px;
+}
+
+.invoice-form {
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.invoice-form label {
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.invoice-form input,
+.invoice-form select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.invoice-form input:focus,
+.invoice-form select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 13px 18px;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    background: #94a3b8;
+    cursor: not-allowed;
+}
+
+#message {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+}
+
+th {
+    background: #1e3a8a;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 96%;
+        margin: 12px auto;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+}
+
+
+
+
+/* AIMS ERP Header */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.brand-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.school-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.brand-text h1 {
+    margin: 0 0 5px;
+}
+
+.brand-text p {
+    margin: 0;
+}
+
+.back-btn {
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Invoice Form */
+.invoice-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.invoice-form input,
+.invoice-form select,
+.invoice-form button {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Invoice Table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+}
+
+/* Mobile Responsive */
+@media (max-width: 520px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .school-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .brand-text p {
+        font-size: 13px;
+    }
+
+    .back-btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .invoice-form input,
+    .invoice-form select,
+    .invoice-form button {
+        width: 100%;
+    }
+}
+
+
+
+/* Professional Generate Invoice Button */
+#generateInvoice {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 22px;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #2563eb, #1d4ed8);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+    transition: all 0.25s ease;
+}
+
+#generateInvoice:hover {
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(37, 99, 235, 0.3);
+}
+
+#generateInvoice:active {
+    transform: scale(0.98);
+}
+
+#generateInvoice:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+    #generateInvoice {
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* AIMS PREMIUM GENERATE INVOICE BUTTON */
+.invoice-form button#generateInvoice {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px !important;
+
+    width: 100% !important;
+    max-width: 320px !important;
+    min-height: 56px !important;
+
+    margin: 22px 0 !important;
+    padding: 16px 24px !important;
+
+    background: linear-gradient(135deg, #4338ca, #2563eb) !important;
+    color: #ffffff !important;
+
+    border: 1px solid #4338ca !important;
+    border-radius: 14px !important;
+
+    font-size: 17px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.4px !important;
+
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.30) !important;
+
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+}
+
+.invoice-form button#generateInvoice::before {
+    content: "+" !important;
+    font-size: 25px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+}
+
+.invoice-form button#generateInvoice:hover {
+    background: linear-gradient(135deg, #312e81, #1d4ed8) !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.40) !important;
+}
+
+.invoice-form button#generateInvoice:active {
+    transform: scale(0.97) !important;
+}
+
+@media (max-width: 520px) {
+    .invoice-form button#generateInvoice {
+        max-width: 100% !important;
+    }
+}
+
+/* AIMS Back to Dashboard Premium Button */
+header.topbar a.back-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important;
+
+    padding: 14px 22px !important;
+    min-height: 48px !important;
+
+    background: #ffffff !important;
+    color: #1e3a8a !important;
+
+    border: 2px solid #ffffff !important;
+    border-radius: 10px !important;
+
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18) !important;
+    transition: all 0.25s ease !important;
+}
+
+header.topbar a.back-btn:hover {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.22) !important;
+}
+
+header.topbar a.back-btn:active {
+    transform: scale(0.96) !important;
+}
+
+@media (max-width: 520px) {
+    header.topbar a.back-btn {
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}

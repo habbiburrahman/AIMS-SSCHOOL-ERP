@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Student Results | AIMS</title>
+    <link rel="stylesheet" href="teacher-results.css">
+</head>
+<body>
+
+    <header class="header">
+
+        <div class="brand">
+            <img src="logo.jpg" alt="AIMS School Logo">
+
+            <div class="brand-text">
+                <h2>AIMS School ERP</h2>
+                <p>Teacher Portal | Student Results</p>
+            </div>
+        </div>
+
+        <div class="teacher-info">
+            <span id="teacherName">Teacher</span>
+            <a href="teacher-dashboard.html" class="back-btn">
+                ← Back to Dashboard
+            </a>
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <h1>Student Results</h1>
+        <p>View examinations and manage student marks.</p>
+
+        <section class="result-card">
+            <label for="examSelect">Select Examination</label>
+            <select id="examSelect">
+                <option value="">Loading examinations...</option>
+            </select>
+
+            <label for="subjectSelect">Select Subject</label>
+            <select id="subjectSelect">
+                <option value="">Select subject</option>
+            </select>
+
+            <button id="loadStudentsBtn">Load Students</button>
+            <p id="message"></p>
+        </section>
+
+        <section class="result-card">
+            <h2>Student Marks</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Marks Obtained</th>
+                            <th>Remarks</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTableBody"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teacher-results.js"></script>
+
+</body>
+</html>

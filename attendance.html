@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Student Attendance</title>
+    <link rel="stylesheet" href="attendance.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand-section">
+            <img src="logo.jpg"
+                 alt="AIMS School Logo"
+                 class="school-logo">
+
+            <div class="brand-text">
+                <h1>AIMS School ERP</h1>
+                <p>Student Attendance Management</p>
+            </div>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Student Attendance</h2>
+            <p>Select class, section and date to mark attendance.</p>
+        </section>
+
+        <section class="attendance-card">
+
+            <h3>Attendance Filters</h3>
+
+            <div class="attendance-filters">
+
+                <div class="form-group">
+                    <label for="classSelect">Select Class</label>
+                    <select id="classSelect">
+                        <option value="">Select Class</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sectionSelect">Select Section</label>
+                    <select id="sectionSelect" disabled>
+                        <option value="">Select Section</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="attendanceDate">Attendance Date</label>
+                    <input type="date" id="attendanceDate">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="attendance-card">
+
+            <div class="student-list-heading">
+                <div>
+                    <h3>Student List</h3>
+                    <p>Mark attendance for each student.</p>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Admission Number</th>
+                            <th>Attendance Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendanceTableBody">
+                        <tr>
+                            <td colspan="3">
+                                Select class and section first.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="save-section">
+                <button type="button" id="saveAttendanceBtn">
+                    Save Attendance
+                </button>
+
+                <p id="message" role="status"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="attendance.js"></script>
+
+</body>
+</html>

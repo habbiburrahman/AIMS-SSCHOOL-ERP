@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Submissions | AIMS Teacher Portal</title>
+    <link rel="stylesheet" href="teacher-homework-submissions.css">
+</head>
+<body>
+
+    <header class="dashboard-header">
+        <div>
+            <h2>AIMS Teacher Portal</h2>
+            <p>Homework Submissions</p>
+        </div>
+        <div class="teacher-info">
+            <span id="teacherName">Teacher</span>
+
+             <a href="teacher-dashboard.html" class="back-dashboard">
+    ← Back to Dashboard
+</a>
+
+            <button id="logoutBtn">Logout</button>
+        </div>
+            
+    </header>
+
+    <main class="container">
+        <h1>Student Homework Submissions</h1>
+        <p>View homework submitted by your students.</p>
+
+        <div id="statusMessage"></div>
+
+        <section class="filter-section">
+            <label for="homeworkFilter">Select Homework</label>
+            <select id="homeworkFilter">
+                <option value="">All Homework</option>
+            </select>
+
+            <button id="loadSubmissionsBtn">Load Submissions</button>
+        </section>
+
+        <section class="table-section">
+            <h2>Submissions List</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Student Name</th>
+                            <th>Homework</th>
+                            <th>Submission</th>
+                            <th>Submitted At</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="submissionsTableBody">
+                        <tr>
+                            <td colspan="6">Loading submissions...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="teacher-homework-submissions.js"></script>
+
+</body>
+</html>

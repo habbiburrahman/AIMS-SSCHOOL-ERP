@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMS - Attendance Records</title>
+    <link rel="stylesheet" href="attendance-records.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand-section">
+            <img
+                src="logo.jpg"
+                alt="AIMS School Logo"
+                class="school-logo"
+            >
+
+            <div class="brand-text">
+                <h1>AIMS School ERP</h1>
+                <p>Attendance Records</p>
+            </div>
+        </div>
+
+        <a href="dashboard.html" class="back-btn">
+            Back to Dashboard
+        </a>
+    </header>
+
+    <main class="container">
+
+        <section class="page-heading">
+            <h2>Student Attendance Records</h2>
+            <p>View and filter student attendance records.</p>
+        </section>
+
+        <section class="filter-card">
+            <h3>Filter Attendance</h3>
+
+            <div class="filters">
+                <div class="form-group">
+                    <label for="dateFilter">Filter by Date</label>
+                    <input type="date" id="dateFilter">
+                </div>
+
+                <div class="form-group">
+                    <label for="statusFilter">Filter by Status</label>
+                    <select id="statusFilter">
+                        <option value="">All Status</option>
+                        <option value="Present">Present</option>
+                        <option value="Absent">Absent</option>
+                        <option value="Late">Late</option>
+                        <option value="Leave">Leave</option>
+                    </select>
+                </div>
+
+                <div class="filter-actions">
+                    <button type="button" id="filterBtn">
+                        Apply Filter
+                    </button>
+
+                    <button type="button" id="resetBtn" class="reset-btn">
+                        Reset
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="records-card">
+
+            <h3>Attendance History</h3>
+
+            <p id="message" role="status"></p>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Student Name</th>
+                            <th>Admission No.</th>
+                            <th>Class</th>
+                            <th>Section</th>
+                            <th>Roll No.</th>
+                            <th>Status</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="recordsTableBody">
+                        <tr>
+                            <td colspan="8">Loading records...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p id="totalRecords">Total Records: 0</p>
+
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="attendance-records.js"></script>
+
+</body>
+</html>

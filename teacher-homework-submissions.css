@@ -1,0 +1,171 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fa;
+    color: #263238;
+}
+
+.dashboard-header {
+    background: #173b67;
+    color: white;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.dashboard-header h2 {
+    margin-bottom: 5px;
+}
+
+.teacher-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+button {
+    background: #1769aa;
+    color: white;
+    border: none;
+    padding: 11px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #0d4f85;
+}
+
+#logoutBtn {
+    background: #d64545;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.container h1 {
+    margin-bottom: 10px;
+    color: #173b67;
+}
+
+.container > p {
+    color: #667085;
+    margin-bottom: 20px;
+}
+
+#statusMessage {
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.filter-section,
+.table-section {
+    background: white;
+    padding: 22px;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.filter-section label {
+    font-weight: bold;
+}
+
+select {
+    padding: 11px;
+    min-width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.table-section h2 {
+    margin-bottom: 18px;
+    color: #173b67;
+}
+
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 750px;
+}
+
+th,
+td {
+    padding: 13px;
+    border: 1px solid #e1e5eb;
+    text-align: left;
+}
+
+th {
+    background: #eaf1f8;
+    color: #173b67;
+}
+
+tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 12px;
+        margin: 15px auto;
+    }
+
+    .dashboard-header {
+        padding: 15px;
+    }
+
+    .filter-section {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    select,
+    .filter-section button {
+        width: 100%;
+    }
+}
+
+
+
+.back-dashboard {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.back-dashboard:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}

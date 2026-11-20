@@ -1,0 +1,241 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f3f6fb;
+    color: #263445;
+}
+
+.topbar {
+    background: #123b65;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar h1 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.topbar p {
+    font-size: 14px;
+}
+
+.topbar a {
+    color: white;
+    text-decoration: none;
+    background: #24618f;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.page-heading {
+    margin-bottom: 25px;
+}
+
+.page-heading h2 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.page-heading p {
+    color: #68788a;
+}
+
+.form-card,
+.table-card {
+    background: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.form-card h2,
+.table-card h2 {
+    margin-bottom: 20px;
+    color: #123b65;
+}
+
+.form-card label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+.form-card input,
+.form-card select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccd5df;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+}
+
+.form-card input:focus,
+.form-card select:focus {
+    border-color: #24618f;
+}
+
+.form-card button {
+    margin-top: 18px;
+    padding: 12px 22px;
+    background: #123b65;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.form-card button:hover {
+    background: #24618f;
+}
+
+#formMessage,
+#sectionMessage {
+    margin-top: 12px;
+}
+
+.table-card {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+th,
+td {
+    padding: 13px;
+    text-align: left;
+    border-bottom: 1px solid #e3e8ef;
+}
+
+th {
+    background: #edf3f9;
+    color: #123b65;
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 94%;
+        margin: 20px auto;
+    }
+
+    .form-card,
+    .table-card {
+        padding: 17px;
+    }
+}
+
+
+
+/* ===== AIMS ERP BRAND HEADER ===== */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.topbar .brand-section {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.topbar .school-logo {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.topbar .brand-text h1 {
+    margin: 0 0 5px;
+}
+
+.topbar .brand-text p {
+    margin: 0;
+}
+
+/* ===== BACK TO DASHBOARD BUTTON ===== */
+
+.topbar a.back-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 22px !important;
+    min-height: 48px;
+    box-sizing: border-box;
+    background: #ffffff !important;
+    color: #1e3a8a !important;
+    border: 2px solid #ffffff !important;
+    border-radius: 10px !important;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none !important;
+    white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+    transition: all 0.25s ease;
+}
+
+.topbar a.back-btn:hover {
+    background: #dbeafe !important;
+    color: #1d4ed8 !important;
+    transform: translateY(-3px);
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+
+@media (max-width: 520px) {
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .topbar .school-logo {
+        width: 52px;
+        height: 52px;
+    }
+
+    .topbar .brand-text h1 {
+        font-size: 19px;
+    }
+
+    .topbar .brand-text p {
+        font-size: 13px;
+    }
+
+    .topbar a.back-btn {
+        width: 100%;
+    }
+}
